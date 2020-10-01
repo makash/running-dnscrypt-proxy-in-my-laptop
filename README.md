@@ -4,7 +4,7 @@ Download the appropriate release, usually Linux x86_64
 
 [https://github.com/DNSCrypt/dnscrypt-proxy/releases/](https://github.com/DNSCrypt/dnscrypt-proxy/releases)
 
-Once you have the files, untar in a directory. 
+Once you have the files, untar in a directory. https://github.com/makash/running-dnscrypt-proxy-in-my-laptop
 
 Next we need to edit the `dnscrypt-proxy.toml` file
 
@@ -44,7 +44,7 @@ sudo systemctl enable dnscrypt.service
 sudo systemctl disable dnscrypt.service
 ```
 
-## Flusing the cache
+## Flushing the cache
 
 ```bash
 sudo systemctl restart dnscrypt.service
