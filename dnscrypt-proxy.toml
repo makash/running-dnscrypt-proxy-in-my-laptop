@@ -1,0 +1,22 @@
+# All comments removed. See original to understand this better
+# https://github.com/DNSCrypt/dnscrypt-proxy/blob/master/dnscrypt-proxy/example-dnscrypt-proxy.toml
+
+server_names = ['captnemo-in','nextdns','google']
+
+# Change this to #isten_addresses = ["0.0.0.0:53"] if you want dnscrypt to be available on all interfaces
+
+listen_addresses = ["127.0.0.1:53"]
+max_clients = 250
+ipv4_servers = true
+ipv6_servers = true
+dnscrypt_servers = true
+doh_servers = true
+require_dnssec = true
+require_nolog = true
+require_nofilter = true
+
+# Always use a fallback resolver 
+fallback_resolver = '1.1.1.1:53'
+ignore_system_dns = true
+cache = true
+# Rest are defaults
