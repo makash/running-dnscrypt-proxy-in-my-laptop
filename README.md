@@ -10,6 +10,8 @@ Next we need to edit the `dnscrypt-proxy.toml` file
 
 ## Editing the configuration
 
+> Use the `.toml` file provided
+
 Choose appropriate `server_names`
 
 Set the  `listen_addresses = ["127.0.0.53:53"]`
@@ -28,16 +30,7 @@ These are the steps that allowed me to move completely replacing DNSCrypt over s
 4. Now If dnscrypt-proxy is running we have a local DNS (caching) which can talk to DNSCrypt servers. I use captnemo-in run by [@captnemo twitter](https://twitter.com/captn3m0) with low latency for me. Additionally I have nextdns as a back up here
 5. If everything is working fine, all we now need to do is add this as a service so that we can start/stop it at will and save it so that it can survive a reboot
 
-```
-[Unit]
-Description=Dnscrypt
-
-[Service]
-ExecStart=/usr/local/bin/dnscrypt-proxy -config /usr/share/dnscrypt/dnscrypt-proxy.toml
-
-[Install]
-WantedBy=multi-user.target
-```
+> Use the `.service` file provided
 
 ```bash
 sudo touch /etc/systemd/system/dnscrypt.service
