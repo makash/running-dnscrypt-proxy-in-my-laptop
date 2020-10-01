@@ -1,0 +1,8 @@
+[Unit]
+Description=Dnscrypt
+
+[Service]
+ExecStart=/usr/local/bin/dnscrypt-proxy -config /usr/share/dnscrypt/dnscrypt-proxy.toml
+
+[Install]
+WantedBy=multi-user.target
