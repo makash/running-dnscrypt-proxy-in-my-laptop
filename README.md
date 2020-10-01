@@ -43,3 +43,15 @@ sudo systemctl enable dnscrypt.service
 # In case you want to stop it from loading at boot
 sudo systemctl disable dnscrypt.service
 ```
+
+## Flusing the cache
+
+```bash
+sudo systemctl restart dnscrypt.service
+```
+
+In case you run the dnscrypt on your router and point the local `systemd-resolve` to that use 
+
+```bash
+sudo systemd-resolve --flush-caches
+```
